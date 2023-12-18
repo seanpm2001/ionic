@@ -97,8 +97,8 @@ importers:
         specifier: 3.0.0
         version: 3.0.0
       playwright:
-        specifier: 1.37.1
-        version: 1.37.1
+        specifier: 1.40.1
+        version: 1.40.1
       prettier:
         specifier: 3.1.0
         version: 3.1.0
@@ -107,7 +107,7 @@ importers:
         version: 5.1.6
       vitest:
         specifier: 0.34.6
-        version: 0.34.6(playwright@1.37.1)
+        version: 0.34.6(playwright@1.40.1)
       vue:
         specifier: 3.3.4
         version: 3.3.4
@@ -1789,7 +1789,7 @@ packages:
       ofetch: 1.3.3
       pathe: 1.1.1
       ufo: 1.1.2
-      vitest: 0.34.6(playwright@1.37.1)
+      vitest: 0.34.6(playwright@1.40.1)
       vue: 3.3.4
     transitivePeerDependencies:
       - rollup
@@ -2665,7 +2665,7 @@ packages:
       std-env: 3.4.3
       test-exclude: 6.0.0
       v8-to-istanbul: 9.1.3
-      vitest: 0.34.6(playwright@1.37.1)
+      vitest: 0.34.6(playwright@1.40.1)
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -4877,6 +4877,14 @@ packages:
 
   /fs.realpath@1.0.0:
     resolution: {integrity: sha512-OO0pH2lK6a0hZnAdau5ItzHPI6pUlvI7jMVnxUQRtw4owF2wk8lOSabtGDCTP4Ggrg2MbGnWO9X8K1t4+fGMDw==}
+
+  /fsevents@2.3.2:
+    resolution: {integrity: sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==}
+    engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
+    os: [darwin]
+    requiresBuild: true
+    dev: true
+    optional: true
 
   /fsevents@2.3.3:
     resolution: {integrity: sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw==}
@@ -7793,19 +7801,20 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /playwright-core@1.37.1:
-    resolution: {integrity: sha512-17EuQxlSIYCmEMwzMqusJ2ztDgJePjrbttaefgdsiqeLWidjYz9BxXaTaZWxH1J95SHGk6tjE+dwgWILJoUZfA==}
+  /playwright-core@1.40.1:
+    resolution: {integrity: sha512-+hkOycxPiV534c4HhpfX6yrlawqVUzITRKwHAmYfmsVreltEl6fAZJ3DPfLMOODw0H3s1Itd6MDCWmP1fl/QvQ==}
     engines: {node: '>=16'}
     hasBin: true
     dev: true
 
-  /playwright@1.37.1:
-    resolution: {integrity: sha512-bgUXRrQKhT48zHdxDYQTpf//0xDfDd5hLeEhjuSw8rXEGoT9YeElpfvs/izonTNY21IQZ7d3s22jLxYaAnubbQ==}
+  /playwright@1.40.1:
+    resolution: {integrity: sha512-2eHI7IioIpQ0bS1Ovg/HszsN/XKNwEG1kbzSDDmADpclKc7CyqkHw7Mg2JCz/bbCxg25QUPcjksoMW7JcIFQmw==}
     engines: {node: '>=16'}
     hasBin: true
-    requiresBuild: true
     dependencies:
-      playwright-core: 1.37.1
+      playwright-core: 1.40.1
+    optionalDependencies:
+      fsevents: 2.3.2
     dev: true
 
   /plist@3.1.0:
@@ -10077,7 +10086,7 @@ packages:
       fsevents: 2.3.3
     dev: true
 
-  /vitest@0.34.6(playwright@1.37.1):
+  /vitest@0.34.6(playwright@1.40.1):
     resolution: {integrity: sha512-+5CALsOvbNKnS+ZHMXtuUC7nL8/7F1F2DnHGjSsszX8zCjWSSviphCb/NuS9Nzf4Q03KyyDRBAXhF/8lffME4Q==}
     engines: {node: '>=v14.18.0'}
     hasBin: true
@@ -10125,7 +10134,7 @@ packages:
       magic-string: 0.30.4
       pathe: 1.1.1
       picocolors: 1.0.0
-      playwright: 1.37.1
+      playwright: 1.40.1
       std-env: 3.4.3
       strip-literal: 1.3.0
       tinybench: 2.5.1
